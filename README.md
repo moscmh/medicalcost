@@ -25,4 +25,17 @@ The important parts of the exploratory data analysis are listed in the following
 * The trendlines could be explained by the choice of hospitals.
 
 # Model Training and Result
-* Eventually, `age`, `BMI`, 
+![Metrics](https://github.com/moscmh/medicalcost/blob/main/plot/metrics.png?raw=true)
+* Eventually, `age`, `BMI`, and the `newly created feature` were used to train a linear regression model.
+* The accuracy of the model on training and testing data are `96.7%` and `96.6%` respectively.
+* The model can be expressed by the following equation. `Label_1` and `Label_2` are binary values that belong to the categorical `newly created feature`. The sum of the binary values for this 2 labels does not exceed 1. If both are `0`, the individual has `Label_3` as the value of the `newly created feature`.
+
+$$Charges = -3717.00 + 1387.91(Smoker) + 273.81(Age) + 32640.09(Label_1) + 13200.32(Label_2)$$  
+
+* For instance, if an individual is a `smoker`, `50` years old, and belongs to `Label_1`,
+
+$$Charges = -3717 + 1387.91(1) + 273.81(50) + 32640.09(1) = 44,001.5$$  
+
+* The **residual plot** indicates the variance in the estimations for individuals in `Label_3` is smaller than those in `Label_1` and `Label_2`.
+* Generally, the greater the medical cost, the greater the error of the model.
+* However, the model still performs well without under- and over-fitting the training data.
