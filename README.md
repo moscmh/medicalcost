@@ -5,6 +5,16 @@
 
 &emsp;Future work requires researching about the exact feature that was created. 
 
+## Python Libraries
+### Data Manipulations
+numpy, pandas
+### Visualization Tools
+matplotlib, seaborn
+### Clustering
+DBSCAN, GaussianMixture from Scikit-Learn
+### Model Building & Evaluation
+LinearRegression from Scikit-Learn
+
 # Exploratory Data Analysis
 The important parts of the exploratory data analysis are listed in the following.
 
