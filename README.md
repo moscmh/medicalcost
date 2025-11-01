@@ -37,7 +37,7 @@ The important parts of the exploratory data analysis are listed in the following
 # Model Training and Result
 ![Metrics](https://github.com/moscmh/medicalcost/blob/main/plot/metrics.png?raw=true)
 * Eventually, `age`, `BMI`, and the `newly created feature` were used to train a linear regression model.
-* The accuracy of the model on training and testing data are `96.7%` and `96.6%` respectively.
+* The $R^2$ of the model on training and testing data are `96.7%` and `96.6%` respectively.
 * The model can be expressed by the following equation. `Label_1` and `Label_2` are binary values that belong to the categorical `newly created feature`. The sum of the binary values for this 2 labels does not exceed 1. If both are `0`, the individual has `Label_3` as the value of the `newly created feature`.
 
 $$Charges = -3717.00 + 1387.91(Smoker) + 273.81(Age) + 32640.09(Label_1) + 13200.32(Label_2)$$  
